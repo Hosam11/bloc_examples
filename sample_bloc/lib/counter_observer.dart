@@ -1,0 +1,12 @@
+import 'package:bloc/bloc.dart';
+import 'package:flutter/foundation.dart';
+
+/// [BlocObserver] for the counter application which
+/// observes all state changes.
+class CounterObserver extends BlocObserver {
+  @override
+  void onChange(BlocBase bloc, Change change) {
+    super.onChange(bloc, change);
+    debugPrint('${bloc.runtimeType} $change');
+  }
+}
